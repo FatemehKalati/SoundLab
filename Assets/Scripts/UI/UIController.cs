@@ -12,19 +12,19 @@ namespace SoundLab.UI
         [SerializeField] private Button _quitBtn;
 
         //Lab Scene
-        [Header("Lab")]
-        [SerializeField] private Button _backToTitleBtn;
+        // [Header("Lab")]
+        // [SerializeField] private Button _backToTitleBtn;
 
         private void Start()
         {
             if (_enterLabBtn)  _enterLabBtn.onClick.AddListener(OnEnterLab);
             if (_quitBtn)      _quitBtn.onClick.AddListener(OnQuit);
-            if (_backToTitleBtn) _backToTitleBtn.onClick.AddListener(OnBackToTitle);
+            // if (_backToTitleBtn) _backToTitleBtn.onClick.AddListener(OnBackToTitle);
         }
 
         // switches scenes
         private void OnEnterLab()    => GameController.Instance.Scenes.GoToLab();
-        private void OnBackToTitle() => GameController.Instance.Scenes.GoToTitle();
+        // private void OnBackToTitle() => GameController.Instance.Scenes.GoToTitle();
 
         private void OnQuit()
         {
