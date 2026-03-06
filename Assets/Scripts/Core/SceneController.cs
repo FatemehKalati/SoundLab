@@ -23,7 +23,7 @@ namespace SoundLab.Core
 
         private IEnumerator LoadRoutine(int buildIndex, Action onDone)
         {
-            yield return Fade(0f, 1f);
+            // yield return Fade(0f, 1f);
 
             var op = SceneManager.LoadSceneAsync(buildIndex);
             op.allowSceneActivation = false;
@@ -31,7 +31,7 @@ namespace SoundLab.Core
             op.allowSceneActivation = true;
             yield return null;
 
-            yield return Fade(1f, 0f);
+            // yield return Fade(1f, 0f);
             onDone?.Invoke();
         }
 
